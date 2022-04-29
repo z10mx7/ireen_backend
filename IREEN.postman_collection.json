@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "e1412b26-83eb-4e06-ae04-e722964b3361",
+		"name": "IREEN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"rfrewfe333\",\n    \"password\":\"jamshid\",\n    \"repassword\":\"jamshid\",\n    \"email\":\"jamshi@wefew.com\",\n    \"birthday\":\"10-10-1990\",\n    \"full_name\":\"jamshid ariya\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v3/user/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v3",
+								"user",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"reza\",\n    \"password\":\"reza\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v3/user/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v3",
+								"user",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view user info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyZnJld2ZlMzMzIiwiaWF0IjoxNjUxMTUzODU0LCJuYmYiOjE2NTExNTM4NTQsImp0aSI6IjYxYTkyZWY3LTQ4MDUtNGVmNC1hMjlkLTIxYmUwYTJjZGRlYyIsInR5cGUiOiJhY2Nlc3MiLCJmcmVzaCI6ZmFsc2V9.zK1d_EzCby7OdP3A6wNIcyUvDH7bUKtbebROLEuWWyY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v3/user/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v3",
+								"user",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "momdify user info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyZnJld2ZlMzMzIiwiaWF0IjoxNjUxMTUzODU0LCJuYmYiOjE2NTExNTM4NTQsImp0aSI6IjYxYTkyZWY3LTQ4MDUtNGVmNC1hMjlkLTIxYmUwYTJjZGRlYyIsInR5cGUiOiJhY2Nlc3MiLCJmcmVzaCI6ZmFsc2V9.zK1d_EzCby7OdP3A6wNIcyUvDH7bUKtbebROLEuWWyY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"abbasssss333333ss@weff.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v3/user/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v3",
+								"user",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Listing",
+			"item": [
+				{
+					"name": "Listing List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyZXphIiwiaWF0IjoxNjUxMTY1MjY2LCJuYmYiOjE2NTExNjUyNjYsImp0aSI6ImM4OTgxZmE4LWQ4YWItNGIxMC04ZTI3LTA4YTgxMzdhNjkzZiIsInR5cGUiOiJhY2Nlc3MiLCJmcmVzaCI6ZmFsc2V9.qBP4TKE8GZlZFF1qPc5n_6LuO7hJ4YUoCSuZUEBa57E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v3/listing",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v3",
+								"listing"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Listing",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyZnJld2ZlMzMzIiwiaWF0IjoxNjUxMTU1MDk0LCJuYmYiOjE2NTExNTUwOTQsImp0aSI6IjhlNTVjM2FiLTYyYjAtNDZhMC05MDdhLTMwMWYwODRkYTJkYiIsInR5cGUiOiJhY2Nlc3MiLCJmcmVzaCI6ZmFsc2V9.sn-0cEQPCIRh4A6Y11VLb0muImdd7quUIkCx4BBMqI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ttype\":\"APARTMENT\",\n    \"availableNow\":1,\n    \"address\":{\n        \"streetName\":\"jamalzade shomali\",\n        \"streetNumber\":78,\n        \"district\":\"rey\",\n        \"city\":\"tehran\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v3/listing/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v3",
+								"listing",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Listing",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyZnJld2ZlMzMzIiwiaWF0IjoxNjUxMTU1MDk0LCJuYmYiOjE2NTExNTUwOTQsImp0aSI6IjhlNTVjM2FiLTYyYjAtNDZhMC05MDdhLTMwMWYwODRkYTJkYiIsInR5cGUiOiJhY2Nlc3MiLCJmcmVzaCI6ZmFsc2V9.sn-0cEQPCIRh4A6Y11VLb0muImdd7quUIkCx4BBMqI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v3/listing/626ab52c2373bab89d83b722",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v3",
+								"listing",
+								"626ab52c2373bab89d83b722"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Listing",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyZnJld2ZlMzMzIiwiaWF0IjoxNjUxMTU1MDk0LCJuYmYiOjE2NTExNTUwOTQsImp0aSI6IjhlNTVjM2FiLTYyYjAtNDZhMC05MDdhLTMwMWYwODRkYTJkYiIsInR5cGUiOiJhY2Nlc3MiLCJmcmVzaCI6ZmFsc2V9.sn-0cEQPCIRh4A6Y11VLb0muImdd7quUIkCx4BBMqI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v3/listing/626ab52b2373bab89d83b721",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v3",
+								"listing",
+								"626ab52b2373bab89d83b721"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Listing",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyZXphIiwiaWF0IjoxNjUxMTY1MjY2LCJuYmYiOjE2NTExNjUyNjYsImp0aSI6ImM4OTgxZmE4LWQ4YWItNGIxMC04ZTI3LTA4YTgxMzdhNjkzZiIsInR5cGUiOiJhY2Nlc3MiLCJmcmVzaCI6ZmFsc2V9.qBP4TKE8GZlZFF1qPc5n_6LuO7hJ4YUoCSuZUEBa57E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ttype\":\"HOUSE\",\n    \"availableNow\":1,\n    \"address\":{\n        \"streetName\":\"jamalzade sher4444444omali\",\n        \"streetNumber\":78,\n        \"district\":\"reqwdy33333\",\n        \"city\":\"11111111\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v3/listing/626aa3e644b3fde8226d37b9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v3",
+								"listing",
+								"626aa3e644b3fde8226d37b9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ping",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"rfrewfe333\",\n    \"password\":\"jamshid\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/ping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

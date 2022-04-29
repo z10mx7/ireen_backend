@@ -1,0 +1,39 @@
+version: "3.7"
+
+services:
+  web:
+    build: .
+    command: bash -c "uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
+    # entrypoint: /entrypoint.sh
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:3.6
+    restart: always
+    command: mongod
+    volumes:
+      - ./data/mongo:/data/db
+      - ./init-db.js:/docker-entrypoint-initdb.d/init-db.js
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongo_user
+      MONGO_INITDB_ROOT_PASSWORD: mongo_password
+    ports:
+      - 27017:27017
+
+  adminer:
+    image: dockette/adminer:mongo
+    restart: always
+    depends_on:
+      - mongo
+    environment:
+      ADMINER_DESIGN: haeckel
+    ports:
+      - 8083:80
+    logging:
+      driver: none
+ 
